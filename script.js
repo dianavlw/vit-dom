@@ -18,44 +18,112 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // Do all of your work inside the document.addEventListener
 
+
+
+
+
+
   // Part 1
   function shortenPageTitle() {
-
+    document.getElementById("main-title").innerHTML = "Doms Page";
   }
+  shortenPageTitle();
+
+
+
+
+
+
 
 
   // Part 2
-  function changeBodyBgColor() {
 
-  }
+  function changeBodyBgColor() {
+  document.body.style.background = "#add8e6";
+  };
+
+changeBodyBgColor();
+
+
+
+
+
+
 
 
   // Part 3
-  function removeLastFavoriteThing() {
 
-  }
+  function removeLastFavoriteThing() {
+    var favoriteList = document.getElementById('favorite-things');
+    var staringPeopleDown = favoriteList.children[5];
+    favoriteList.removeChild(staringPeopleDown);
+  };
+
+removeLastFavoriteThing();
+
+
+
+
+
+
 
 
   // Part 4
   function makeSpecialTitlesBigger() {
+     document.getElementById("main-title").style.fontSize = "4em";
+  };
 
-  }
+makeSpecialTitlesBigger();
+
+
+
+
+
+
+
 
 
   // Part 5
   function RemoveChicagoRace() {
+var pastRace = document.getElementById('past-races');
+var chicago = pastRace.children[3];
+pastRace.removeChild(chicago);
+  };
 
-  }
+RemoveChicagoRace();
+
+
+
+
+
+
 
   // Part 6
   function addPastRace() {
+    var addRace = document.createElement("LI");
+    var newCity = document.createTextNode("Mexico");
+    addRace.appendChild(newCity);
+    document.getElementById("past-races").appendChild(addRace);
+};
+addPastRace();
 
-  }
+
+
+
+
 
 
   // Part 7
-  function createNewBlogPost() {
+  // function createNewBlogPost() {
+  //  var newDiv = document.createElement('div');
+  //  newDiv = className= 'blog-post';
+  // newDiv.setAttribute('class', "blog-post purple");
+  // var newDiveText = document.createTextNode('Mexico');
+  // newDiv.appendChild(newDivText);
 
-  }
+  // var newPost =document.querySelector('main .special-title);
+  // var h1 = document.querySelector('main newPost');
+  // };
 
 });
+createNewBlogPost();
